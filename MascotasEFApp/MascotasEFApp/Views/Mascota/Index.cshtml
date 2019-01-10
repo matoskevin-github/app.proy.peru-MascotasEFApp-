@@ -1,0 +1,42 @@
+﻿@model List<MascotasEFApp.Models.MASCOTA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>
+    <a href="@Url.Action("Nuevo","Mascota")" class="btn btn-success" style="float:right">Nuevo</a>
+    Index
+</h2>
+<hr />
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Nombre Dueño</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var mascota in Model)
+        {
+            <tr>
+                <td>@mascota.ID </td>
+                <td>@mascota.NOMBRE </td>
+                <td>@mascota.RAZA</td>
+                <td>@mascota.EDAD</td>
+                <td>@mascota.NOMBREDUENO</td>
+                <td>
+                    <a href="@Url.Action("Actualizar", "Mascota", new { Id = mascota.ID})" class="btn btn-primary">Actualizar</a>
+                    <a href="@Url.Action("Eliminar", "Mascota", new { Id = mascota.ID})" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>

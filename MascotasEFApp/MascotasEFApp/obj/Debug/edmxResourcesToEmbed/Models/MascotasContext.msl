@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MascotasBDModelStoreContainer" CdmEntityContainer="MascotasConnection">
+    <EntitySetMapping Name="MASCOTA">
+      <EntityTypeMapping TypeName="MascotasBDModel.MASCOTA">
+        <MappingFragment StoreEntitySet="MASCOTA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="RAZA" ColumnName="RAZA" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="NOMBREDUENO" ColumnName="NOMBREDUENO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
